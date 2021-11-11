@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryPattern.BL\FactoryPattern.BL.csproj" />
+  </ItemGroup>
+
 </Project>
