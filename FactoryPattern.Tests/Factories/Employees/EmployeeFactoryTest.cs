@@ -10,7 +10,7 @@ namespace FactoryPattern.Tests.Factories.Employees
         [Fact]
         public void Create_CanCreateDeveloper_Developer()
         {
-            // Actual
+            // Arrange
             IEmployeeFactory employeeFactory = new EmployeeFactory("Maksim", 100);
 
             // Act
@@ -25,7 +25,7 @@ namespace FactoryPattern.Tests.Factories.Employees
         [Fact]
         public void Create_CanCreateManager_Manager()
         {
-            // Actual
+            // Arrange
             IEmployeeFactory employeeFactory = new EmployeeFactory("Vasia", 150);
 
             // Act
@@ -40,7 +40,7 @@ namespace FactoryPattern.Tests.Factories.Employees
         [Fact]
         public void Create_CanCreatePlumber_Plumber()
         {
-            // Actual
+            // Arrange
             IEmployeeFactory employeeFactory = new EmployeeFactory("Peter", 50);
 
             // Act
@@ -55,7 +55,7 @@ namespace FactoryPattern.Tests.Factories.Employees
         [Fact]
         public void Create_CannotCreateInvalidEmployee_ArgumentException()
         {
-            // Actual
+            // Arrange
             IEmployeeFactory employeeFactory = new EmployeeFactory("Invalid employee", 100);
 
             // Act
