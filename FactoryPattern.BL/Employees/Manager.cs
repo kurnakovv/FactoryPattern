@@ -18,7 +18,7 @@ namespace FactoryPattern.BL.Employees
 
         public void Work()
         {
-            throw new NotImplementedException();
+            // Logic.
         }
     }
 }
