@@ -10,6 +10,8 @@ namespace FactoryPattern.BL.Employees
 
         public DateTime HiringDate { get; } = DateTime.Now;
 
+        public string Type => GetType().Name;
+
         public Manager(string name, int salary)
         {
             Name = name;

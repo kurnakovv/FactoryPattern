@@ -5,6 +5,7 @@
         string Name { get; }
         int Salary { get; }
         DateTime HiringDate { get; }
+        string Type { get; }
         void Work();
     }
 }
