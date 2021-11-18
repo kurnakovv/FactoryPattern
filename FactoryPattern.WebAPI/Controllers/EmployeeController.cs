@@ -21,10 +21,17 @@ public class EmployeeController : ControllerBase
     [HttpPost]
     public ActionResult<IEmployee> Create(EmployeeDTO employeeDTO)
     {
-        _employeeFactory = new EmployeeFactory(employeeDTO.Name, employeeDTO.Salary);
-        var employee = _employeeFactory.Create(employeeDTO.Type);
-        _employees.Add(employee);
+        try
+        {
+            _employeeFactory = new EmployeeFactory(employeeDTO.Name, employeeDTO.Salary);
+            var employee = _employeeFactory.Create(employeeDTO.Type);
+            _employees.Add(employee);
 
-        return Ok(employee);
+            return Ok(employee);
+        }
+        catch (ArgumentException)
+        {
+            return NotFound("Employee type not found.");
+        }
     }
 }
