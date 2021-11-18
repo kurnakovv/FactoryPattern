@@ -11,14 +11,14 @@ var inputSalary = Console.ReadLine();
 int.TryParse(inputSalary, out int salary);
 
 Console.WriteLine("Select the employee type:");
-Console.WriteLine("1: Developer");
-Console.WriteLine("2: Manager");
-Console.WriteLine("3: Plumber");
+Console.WriteLine("Developer");
+Console.WriteLine("Manager");
+Console.WriteLine("Plumber");
 var inputEmployeeType = Console.ReadLine();
 EmployeeType.TryParse(inputEmployeeType, out EmployeeType employeeType);
 
 IEmployeeFactory employeeFactory = new EmployeeFactory(inputName, salary);
 IEmployee employee = employeeFactory.Create(employeeType);
 
-Console.WriteLine(employee.Name + " " + employee.Salary);
+Console.WriteLine(employee.Name + " " + employee.Salary + " " + employee.GetType());
 employee.Work();
